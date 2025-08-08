@@ -6,33 +6,121 @@
   <title>Perth Export Starter Kit – $199</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Inter',sans-serif;color:#fff;line-height:1.6;scroll-behavior:smooth;
-         height:100vh;overflow-y:scroll;scroll-snap-type:y mandatory}
-    .section{height:100vh;display:flex;flex-direction:column;justify-content:center;
-             align-items:center;text-align:center;position:relative;scroll-snap-align:start;
-             background-size:cover;background-position:center;background-attachment:fixed}
-    .section::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;
-                     background:rgba(0,0,0,.45);z-index:1}
-    .section-content{z-index:2;max-width:960px;padding:0 20px}
-    .hero{background:url('https://images.unsplash.com/photo-1645871317023-00ca188755de?auto=format&fit=crop&w=1920&q=80')}
-    .what-you-get{background:url('https://images.unsplash.com/photo-1645871306587-bebaa2f1dfc0?auto=format&fit=crop&w=1920&q=80')}
-    .social-proof{background:url('https://images.unsplash.com/photo-1536788567643-8c2368376526?auto=format&fit=crop&w=1920&q=80')}
-    .upsell{background:url('https://images.unsplash.com/photo-1639416360690-43be9f526dc6?auto=format&fit=crop&w=1920&q=80')}
-    .footer{background:url('https://images.unsplash.com/photo-1501890664351-4ef399c1524f?auto=format&fit=crop&w=1920&q=80')}
-    h1{font-size:48px;font-weight:900;margin-bottom:16px;text-shadow:0 2px 10px rgba(0,0,0,.4)}
-    p{font-size:20px;margin-bottom:32px;max-width:680px}
-    .btn{background:#FF6B00;color:#fff;padding:16px 32px;font-size:18px;font-weight:700;
-         border:none;border-radius:8px;text-decoration:none;display:inline-block;
-         max-width:400px;width:100%}
-    .btn-outline{background:transparent;color:#FF6B00;border:2px solid #FF6B00}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}
-    .feature h3{font-size:20px;font-weight:700;margin:16px 0}
-    .icon{font-size:64px;margin-bottom:16px}
-    footer{padding:32px 0;font-size:12px;color:#ccc}
-    @media(max-width:768px){
-      h1{font-size:36px}
-      .grid{grid-template-columns:1fr}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #fff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+    }
+    .section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      scroll-snap-align: start;
+      background-size: cover;
+      background-position: center; /* Ensures the image is centered */
+      background-attachment: fixed;
+    }
+    .section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.45); /* 45% dark overlay */
+      z-index: 1;
+    }
+    .section-content {
+      z-index: 2;
+      max-width: 960px;
+      padding: 0 20px;
+    }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1645871317023-00ca188755de?auto=format&fit=crop&w=1920&q=80');
+    }
+    .what-you-get {
+      background-image: url('https://images.unsplash.com/photo-1645871306587-bebaa2f1dfc0?auto=format&fit=crop&w=1920&q=80');
+    }
+    .social-proof {
+      background-image: url('https://images.unsplash.com/photo-1536788567643-8c2368376526?auto=format&fit=crop&w=1920&q=80');
+    }
+    .upsell {
+      background-image: url('https://images.unsplash.com/photo-1639416360690-43be9f526dc6?auto=format&fit=crop&w=1920&q=80');
+    }
+    .footer {
+      background-image: url('https://images.unsplash.com/photo-1501890664351-4ef399c1524f?auto=format&fit=crop&w=1920&q=80');
+    }
+    h1 {
+      font-size: 48px;
+      font-weight: 900;
+      margin-bottom: 16px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 32px;
+      max-width: 680px;
+    }
+    .btn {
+      background: #FF6B00;
+      color: #fff;
+      padding: 16px 32px;
+      font-size: 18px;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .btn-outline {
+      background: transparent;
+      color: #FF6B00;
+      border: 2px solid #FF6B00;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 40px;
+    }
+    .feature h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 16px 0;
+    }
+    .icon {
+      font-size: 64px;
+      margin-bottom: 16px;
+    }
+    footer {
+      padding: 32px 0;
+      font-size: 12px;
+      color: #ccc;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 36px;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -75,7 +163,7 @@
   <section class="section upsell">
     <div class="section-content">
       <div class="icon">🔍</div>
-      <p style="font-size:20px;margin-bottom:24px">Need a live walkthrough? Book a 1-hour Zoom – $499</p>
+      <p style="font-size: 20px; margin-bottom: 24px;">Need a live walkthrough? Book a 1-hour Zoom – $499</p>
       <a class="btn btn-outline" href="https://calendly.com/yourname/perthkit499">Book Your Zoom Call</a>
     </div>
   </section>
